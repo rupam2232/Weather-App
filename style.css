@@ -121,12 +121,6 @@ body {
     transition: transform .6s ease, opacity 0.6s ease;
 }
 
-.animation2 {
-    transform: translateY(0);
-    transition: transform ease 1s;
-    transition-delay: 4.2s;
-}
-
 .weather img {
     width: 50%;
     display: block;
