@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <section class="first">
+            <img src="assets/location.svg" alt="location-icon">
+            <input type="text" name="searchbar" id="search" placeholder="Enter Location" autocomplete="off">
+            <button type="button" class="search-btn">
+                <img src="assets/search.svg" alt="search">
+            </button>
+        </section>
+        <section class="weather ">
+            <div class="location-not-found not-found">
+                <p class="locname">Please enter a location</p>
+                <img src="assets/404.png" alt="error">
+            </div>
+            <div class="found founded">
+                <img class="weatherimg" src="assets/rain.png" alt="weather-img">
+                <p class="temp">0<sup>°C</sup></p>
+                <p class="temp-condition">Broken Clouds</p>
+                <section class="third overflow">
+                    <div class="humidity same samech">
+                        <img src="assets/humidity.svg" alt="humidity-img">
+                        <div class="humid-details same2">
+                            <p class="humnum same3">0%</p>
+                            <p class="hum-name same4">Humidity</p>
+                        </div>
+                    </div>
+                    <div class="wind same samech">
+                        <img src="assets/wind.svg" alt="wind-img">
+                        <div class="wind-details same2">
+                            <p class="windnum same3">0 Km/h</p>
+                            <p class="wind-name same4">Wind Speed</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
