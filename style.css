@@ -19,16 +19,28 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: all 1s ease;
+    overflow: hidden;
 }
-
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: all 1s ease;
+}
 .main {
+    height: 3.9rem;
     width: 20rem;
     background: rgba(255, 255, 255, .1);
     backdrop-filter: blur(30px);
     border: 2px solid rgba(255, 254, 254, 0.2);
     border-radius: 7px;
     padding: 12px 0px;
-    transition: height .4s ease;
+    transition: height .7s ease;
 }
 
 .first {
