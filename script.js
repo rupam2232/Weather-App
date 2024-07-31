@@ -24,7 +24,7 @@ async function check() {
     const found = document.querySelector(".founded")
     const humidity = document.querySelector(".humidity")
     const wind = document.querySelector(".wind")
-    const video = document.querySelector("video")
+    // const video = document.querySelector("video")
     // console.log(video)
 
 
@@ -50,11 +50,14 @@ async function check() {
         if (found.id.includes("block")) {
             found.removeAttribute("id");
         }
+        if (found.classList.contains("active")) {
+            found.classList.remove("active")
+            found.classList.add("found")
+        }
         main.style.height = "16rem"
         document.querySelector(".locname").innerHTML = "Please enter a location"
         location_not_found.setAttribute("id","block")
         document.body.style.backgroundImage = "url('assets/default.png')"
-        video.src = ""
         setTimeout(() => {
             location_not_found.classList.add("activet")
             location_not_found.classList.remove("location-not-found")
@@ -67,11 +70,14 @@ async function check() {
         if (found.id.includes("block")) {
             found.removeAttribute("id");
         }
+        if (found.classList.contains("active")) {
+            found.classList.remove("active")
+            found.classList.add("found")
+        }
         main.style.height = "16rem"
         document.querySelector(".locname").innerHTML = "Sorry, Location not found!!!"
         location_not_found.setAttribute("id","block")
         document.body.style.backgroundImage = "url('assets/default.png')"
-        video.src = ""
         setTimeout(() => {
             location_not_found.classList.add("activet")
             location_not_found.classList.remove("location-not-found")
@@ -81,6 +87,10 @@ async function check() {
   
     if (location_not_found.id.includes("block")) {
         location_not_found.removeAttribute("id");
+    }
+    if (location_not_found.classList.contains("activet")) {
+        location_not_found.classList.remove("activet")
+        location_not_found.classList.add("location-not-found")
     }
     main.style.height = "23rem"
     found.setAttribute("id","block")
@@ -95,33 +105,27 @@ async function check() {
     switch (data.weather[0].main) {
         case "Clouds":
             weatherimg.src = "assets/cloud.png"
-            document.body.style.backgroundImage = "url()"
-            video.src = "assets/cloud.mp4"
+            document.body.style.backgroundImage = "url('assets/cloudweather.jpg')"
             break;
         case "Clear":
             weatherimg.src = "assets/clear.png"
-            document.body.style.backgroundImage = "url()"
-            video.src = "assets/clear.mp4"
+            document.body.style.backgroundImage = "url('assets/clearcloud.jpg')"
             break;
         case "Mist":
             weatherimg.src = "assets/mist.png"
-            document.body.style.backgroundImage = "url()"
-            video.src = "assets/mist.mp4"
+            document.body.style.backgroundImage = "url('assets/mistcloud.png')"
             break;
         case "Rain":
             weatherimg.src = "assets/rain.png"
-            document.body.style.backgroundImage = "url()"
-            video.src = "assets/rain.mp4"
+            document.body.style.backgroundImage = "url('assets/rainweather.jpg')"
             break;
         case "Snow":
             weatherimg.src = "assets/snow.png"
-            document.body.style.backgroundImage = "url()"
-            video.src = "assets/snow.mp4"
+            document.body.style.backgroundImage = "url('assets/snowweather.png')"
             break;
         case "Haze" :
             weatherimg.src = "assets/haze.png"
-            document.body.style.backgroundImage = "url()"
-            video.src = "assets/haze.mp4"
+            document.body.style.backgroundImage = "url('assets/hazeweather.jpg')"
             break;
     }
     setTimeout(() => {

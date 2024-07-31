@@ -41,6 +41,7 @@ video{
     border-radius: 7px;
     padding: 12px 0px;
     transition: height .7s ease;
+    overflow: hidden;
 }
 
 .first {
